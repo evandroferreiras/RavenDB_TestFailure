@@ -12,6 +12,12 @@ namespace ReportsEverywhereClass.Databases
 
     public class DatabaseSQLServer : DataBaseBase
     {
+
+        public DatabaseSQLServer()
+        {
+            
+        }
+
         public DatabaseSQLServer(string connectionStringRDB, string connectionStringODDB, string databaseODDB)
             : base(connectionStringRDB, connectionStringODDB, databaseODDB)
         {

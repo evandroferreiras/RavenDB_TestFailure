@@ -19,6 +19,10 @@ namespace ReportsEverywhereClass.Database_structure
             ReferencedColumnId = referencedColumnId;
         }
 
+        public DSForeignKey()
+        {
+        }
+
         public int Id { get; set; }
         public int ParentSchemaId { get; set; }
         public int ParentTableId { get; set; }

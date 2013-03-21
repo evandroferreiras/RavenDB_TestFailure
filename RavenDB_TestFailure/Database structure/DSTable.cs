@@ -12,6 +12,10 @@ namespace ReportsEverywhereClass.Database_structure
         public List<DSColumn> Columns { get; set; }
         public String SchemaName { get; set; }
 
+        public DSTable()
+        {
+        }
+
         public DSTable(int id, string tableName, string schemaName)
         {
             Id = id;

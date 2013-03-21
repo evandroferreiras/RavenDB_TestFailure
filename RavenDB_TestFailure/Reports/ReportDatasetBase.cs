@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using Raven.Imports.Newtonsoft.Json;
 using ReportsEverywhereClass.Database_structure;
 
 namespace ReportsEverywhereClass.Reports
@@ -11,6 +12,7 @@ namespace ReportsEverywhereClass.Reports
     public abstract class ReportDatasetBase
     {
         public DataSet DatasetLoaded;
+        [JsonIgnore]
         protected ReportConfiguration Config;
         protected String ConnectionStringRDB;
         protected DataBaseBase Database;

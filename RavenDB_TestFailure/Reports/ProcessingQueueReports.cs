@@ -21,6 +21,9 @@ namespace ReportsEverywhereClass.Reports
 
         public List<ReportConfiguration> ReportConfigurations;
 
+        public ProcessingQueueReports() 
+        {
+        }
 
         public ProcessingQueueReports(string connectionStringODDB, string connectionStringRDB, string databaseODDB, DataBaseBase.BancoDados bancoDados, DataBaseBase dataBaseBase) : base(connectionStringODDB, databaseODDB)
         {
@@ -32,6 +35,7 @@ namespace ReportsEverywhereClass.Reports
 
         public int LoadQueue()
         {
+            
             using (var documentStore = new DocumentStore())
             {
                 documentStore.Url = ConnectionStringODDB;
@@ -50,7 +54,7 @@ namespace ReportsEverywhereClass.Reports
                     }
                 }
             }
-
+            
 
             return this.ReportConfigurations.Count(x => (x.Status == ReportConfiguration.StatusType.Pending) );
         }

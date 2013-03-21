@@ -11,6 +11,12 @@ namespace ReportsEverywhereClass.Database_structure
 {
     public abstract class DataBaseBase : RavenDBBase
     {
+
+        protected DataBaseBase()
+        {
+            
+        }
+
         public enum BancoDados
         {
             MSSQLSERVER

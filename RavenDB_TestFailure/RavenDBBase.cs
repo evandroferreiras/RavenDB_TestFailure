@@ -15,6 +15,10 @@ namespace ReportsEverywhereClass
         public string ConnectionStringODDB;
         public string DatabaseODDB;
 
+        protected RavenDBBase()
+        {
+        }
+
         protected RavenDBBase(string connectionStringODDB, string databaseODDB)
         {
             this.ConnectionStringODDB = connectionStringODDB;
